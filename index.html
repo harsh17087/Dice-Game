@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <title>Pig Game</title>
+    <title>Dice Game</title>
   </head>
   <body>
+    <button class="howToPlay">How to PLAY!</button>
     <main>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
@@ -27,10 +28,28 @@
       </section>
 
       <img src="dice-5.png" alt="Playing dice" class="dice" />
+
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
     </main>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>I'll show you, How to play this game 😍</h1>
+      <p>
+        1. Roll the dice. The score will be reflected on current score box.
+        <br />
+        2. You can either hold your number or again roll your dice. <br />
+        3. If dice result is something other than -1, then it will add to your
+        previous current score. On holding, your current score will be added to
+        your main score and chance will be given to other player <br />
+        4. If dice result is -1, then you'll lose your current score and player
+        will be switched and you can't add anything to your total score. <br />
+        5. Player who will complete 100 points first will be declared as Winner
+        and to start new game click on NEW GAME.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
     <script src="script.js"></script>
   </body>
 </html>
